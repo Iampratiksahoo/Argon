@@ -91,6 +91,7 @@
     <ClCompile Include="src\Utilities\Log.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\RenderWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="vendor\lib\SDL2.lib" />
@@ -100,6 +101,7 @@
     <ClInclude Include="src\Utilities\Log.h" />
     <ClInclude Include="src\Game.h" />
     <ClInclude Include="src\Core.h" />
+    <ClInclude Include="src\RenderWindow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

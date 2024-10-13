@@ -55,6 +55,9 @@ void const Log::Print (Type log_type, const char* log_format, ...)
     // Use vprintf to print formatted output
     vprintf(log_format, args);
 
+    // Add a new Line
+    printf("\n");
+
     // reset the console color
     reset_color();
 
