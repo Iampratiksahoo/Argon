@@ -6,7 +6,7 @@ public:
 	Game();
 	~Game() = default;
 
-private:
+protected:
 	/// <summary>
 	/// Initializes SDL2 and all the Game Modules
 	/// </summary>
@@ -29,7 +29,7 @@ private:
 
 
 
-protected: 
+private: 
 	bool m_gameRunning; 
 
 	class RenderWindow* m_renderWindow; 

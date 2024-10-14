@@ -29,7 +29,7 @@ Log* Log::GetInstance()
     return m_Instance;
 }
 
-void const Log::Print (Type log_type, const char* log_format, ...)
+void const Log::Print (Type logType, const char* logFormat, ...)
 {
     // Get current time
     auto now = std::chrono::system_clock::now();
@@ -44,16 +44,16 @@ void const Log::Print (Type log_type, const char* log_format, ...)
 
 
     va_list args;
-    va_start(args, log_format);
+    va_start(args, logFormat);
 
     // set the color of the text in the console
-    set_color((int)log_type);
+    set_color((int)logType);
 
     // print the time
     std::cout << "[" << std::put_time(&local_time, "%d-%m-%Y %H:%M:%S") << "] ";
 
     // Use vprintf to print formatted output
-    vprintf(log_format, args);
+    vprintf(logFormat, args);
 
     // Add a new Line
     printf("\n");

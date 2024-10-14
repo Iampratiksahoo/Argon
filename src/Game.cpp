@@ -14,7 +14,13 @@ Game::Game() :
 {
     initSDL();
 
+    // Set the game Running flag to true
+    m_gameRunning = true;
+
+    // init the render window
     m_renderWindow = new RenderWindow("Argon", 800, 600);
+
+    // init the event
     m_event = new SDL_Event();
 
     update();
@@ -25,6 +31,12 @@ void Game::update()
     while (m_gameRunning)
     {
         pollEvents();
+
+
+        // TEST
+        m_renderWindow->Clear();
+        m_renderWindow->Render(m_renderWindow->GetOrLoadTexture("res/images/ab.png"));
+        m_renderWindow->Display();
     }
 }
 
@@ -58,9 +70,6 @@ void Game::initSDL()
     AG_SUCCESS("Successfully initialized SDL.");
 
     AG_LOG("Starting game...");
-
-    // Set the game Running flag to true
-    m_gameRunning = true;
 }
 
 void Game::pollEvents()

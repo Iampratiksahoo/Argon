@@ -14,7 +14,7 @@ public:
 
     static Log* GetInstance();
 
-    const static void Print(Type log_type, const char* log_format, ...);
+    const static void Print(Type logType, const char* logFormat, ...);
 
 private:
     static Log* m_Instance;

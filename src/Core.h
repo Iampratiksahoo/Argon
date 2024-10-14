@@ -2,8 +2,8 @@
 
 #include "Utilities/Log.h"
 
-#define AG_LOG(log_format, ...)			Log::GetInstance()->Print(Log::Type::LOG, log_format, __VA_ARGS__)
-#define AG_NOTICE(log_format, ...)		Log::GetInstance()->Print(Log::Type::NOTICE, log_format, __VA_ARGS__)
-#define AG_WARN(log_format, ...)		Log::GetInstance()->Print(Log::Type::WARNING, log_format, __VA_ARGS__)
-#define AG_SUCCESS(log_format, ...)		Log::GetInstance()->Print(Log::Type::SUCCESS, log_format, __VA_ARGS__)
-#define AG_ERROR(log_format, ...)		Log::GetInstance()->Print(Log::Type::ERROR, log_format, __VA_ARGS__)
+#define AG_LOG(logFormat, ...)			Log::GetInstance()->Print(Log::Type::LOG, logFormat, __VA_ARGS__)
+#define AG_NOTICE(logFormat, ...)		Log::GetInstance()->Print(Log::Type::NOTICE, logFormat, __VA_ARGS__)
+#define AG_WARN(logFormat, ...)			Log::GetInstance()->Print(Log::Type::WARNING, logFormat, __VA_ARGS__)
+#define AG_SUCCESS(logFormat, ...)		Log::GetInstance()->Print(Log::Type::SUCCESS, logFormat, __VA_ARGS__)
+#define AG_ERROR(logFormat, ...)		Log::GetInstance()->Print(Log::Type::ERROR, logFormat, __VA_ARGS__)
