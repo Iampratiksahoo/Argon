@@ -6,6 +6,7 @@
 
 #include "Core.h"
 #include "RenderWindow.h"
+#include "Vector2.h"
 
 Game::Game() : 
     m_gameRunning(false),
@@ -23,6 +24,16 @@ Game::Game() :
     // init the event
     m_event = new SDL_Event();
 
+    auto vec1 = Vector2<int>(2, 3);
+    auto vec2 = Vector2<int>(4, 5);
+    AG_WARN("Vector1: %s", vec1.ToString());
+    AG_WARN("Vector2: %s", vec2.ToString());
+    AG_WARN("Vector Add: %s", (vec1 + vec2).ToString());
+    AG_WARN("Vector Minus: %s", (vec1 - vec2).ToString());
+    AG_WARN("Vector Float Add: %s", (vec2 + 5.f).ToString());
+    AG_WARN("Vector Float Minus: %s", (vec2 - 5.0).ToString());
+    AG_WARN("Vector Float Multiply: %s", (vec2 * 5).ToString());
+
     update();
 }
 
@@ -31,12 +42,6 @@ void Game::update()
     while (m_gameRunning)
     {
         pollEvents();
-
-
-        // TEST
-        m_renderWindow->Clear();
-        m_renderWindow->Render(m_renderWindow->GetOrLoadTexture("res/images/ab.png"));
-        m_renderWindow->Display();
     }
 }
 
